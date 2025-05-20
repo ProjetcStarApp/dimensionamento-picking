@@ -1,0 +1,291 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  background-color: #282c34;
+  padding: 10px 0;
+}
+
+.nav-tab {
+  color: white;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.nav-tab:hover {
+  background-color: #3a3f4b;
+}
+
+.nav-tab.active {
+  background-color: #61dafb;
+  color: #282c34;
+  font-weight: bold;
+}
+
+.dashboard-container,
+.data-container,
+.parameters-container,
+.simulation-container {
+  margin-top: 20px;
+}
+
+.dashboard-summary {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .dashboard-summary {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.data-preview {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+table th {
+  background-color: #f5f5f5;
+}
+
+.parameter-group {
+  margin-bottom: 20px;
+}
+
+.parameter-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.parameter-item label {
+  flex: 1;
+  text-align: left;
+}
+
+.parameter-item input {
+  width: 100px;
+  padding: 5px;
+  margin-left: 10px;
+}
+
+.chart-container {
+  height: 400px;
+  margin-bottom: 20px;
+}
+
+.results-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.result-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
+
+.result-card h4 {
+  margin-top: 0;
+  color: #0066cc;
+}
+
+.result-value {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.file-upload {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.file-upload-label {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.file-input {
+  display: none;
+}
+
+.file-button {
+  background-color: #0066cc;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.file-name {
+  margin-left: 10px;
+  color: #666;
+}
+
+.loading {
+  color: #0066cc;
+}
+
+.error {
+  color: #cc0000;
+}
+
+.mapping-form {
+  margin-bottom: 20px;
+}
+
+.mapping-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.mapping-item label {
+  flex: 1;
+  text-align: left;
+}
+
+.mapping-item select {
+  width: 200px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.auto-detected {
+  border: 2px solid #0066cc;
+  background-color: #f0f8ff;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.secondary-button {
+  background-color: #f0f0f0;
+  color: #333;
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.cancel-button {
+  background-color: #f0f0f0;
+  color: #333;
+  border: 1px solid #ddd;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.confirm-button {
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.info-text {
+  background-color: #f0f8ff;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  border-left: 4px solid #0066cc;
+}
+
+.results-details {
+  margin-top: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .nav-tabs {
+    flex-direction: column;
+  }
+  
+  .nav-tab {
+    margin: 5px 0;
+  }
+  
+  .parameter-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .parameter-item input {
+    margin-left: 0;
+    margin-top: 5px;
+    width: 100%;
+  }
+  
+  .mapping-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .mapping-item select {
+    width: 100%;
+    margin-top: 5px;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+  }
+  
+  .button-group {
+    flex-direction: column;
+  }
+}
