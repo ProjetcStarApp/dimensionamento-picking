@@ -1,0 +1,148 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  background-color: #282c34;
+  padding: 10px 0;
+}
+
+.nav-tab {
+  color: white;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.nav-tab:hover {
+  background-color: #3a3f4b;
+}
+
+.nav-tab.active {
+  background-color: #61dafb;
+  color: #282c34;
+  font-weight: bold;
+}
+
+.dashboard-container,
+.data-container,
+.parameters-container,
+.simulation-container {
+  margin-top: 20px;
+}
+
+.dashboard-summary {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .dashboard-summary {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.data-preview {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+table th {
+  background-color: #f5f5f5;
+}
+
+.parameter-group {
+  margin-bottom: 20px;
+}
+
+.parameter-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.parameter-item label {
+  flex: 1;
+  text-align: left;
+}
+
+.parameter-item input {
+  width: 100px;
+  padding: 5px;
+  margin-left: 10px;
+}
+
+.chart-container {
+  height: 400px;
+  margin-bottom: 20px;
+}
+
+.results-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.result-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
+
+.result-card h4 {
+  margin-top: 0;
+  color: #0066cc;
+}
+
+.result-value {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .nav-tabs {
+    flex-direction: column;
+  }
+  
+  .nav-tab {
+    margin: 5px 0;
+  }
+}
